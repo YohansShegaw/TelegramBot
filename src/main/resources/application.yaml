@@ -1,0 +1,28 @@
+server:
+  port: ${PORT:8080}
+spring:
+  application:
+    name: branch-telegram-gateway
+  threads:
+    virtual:
+      enabled: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/enterprise_sales_bot
+    username: ${TG_DB_USERNAME:postgres}
+    password: ${TG_DB_PASSWORD:123456}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+telegram:
+  bot:
+    token: ${TELEGRAM_BOT_TOKEN:9049595999:AAFAeIQX2Fxqe-XaCNkAF9T30orFI5H0sQA}
+    username: ${TELEGRAM_BOT_USERNAME:AddisPrimeSalesBot}
+  polling:
+    enabled: true
+    timeout-seconds: 30
+  delete:
+    customer-enabled: false
