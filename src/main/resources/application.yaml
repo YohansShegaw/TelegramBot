@@ -7,7 +7,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: jdbc:postgresql://localhost:5432/enterprise_sales_bot
+    url: ${TG_DB_USERNAME:jdbc:postgresql://localhost:5432/enterprise_sales_bot}
     username: ${TG_DB_USERNAME:postgres}
     password: ${TG_DB_PASSWORD:123456}
   jpa:
@@ -19,8 +19,8 @@ spring:
 
 telegram:
   bot:
-    token: ${TELEGRAM_BOT_TOKEN:9049595999:AAFAeIQX2Fxqe-XaCNkAF9T30orFI5H0sQA}
-    username: ${TELEGRAM_BOT_USERNAME:AddisPrimeSalesBot}
+    token: ${TELEGRAM_BOT_TOKEN}
+    username: ${TELEGRAM_BOT_USERNAME}
   polling:
     enabled: true
     timeout-seconds: 30
