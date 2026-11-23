@@ -7,7 +7,7 @@ spring:
     virtual:
       enabled: true
   datasource:
-    url: ${TG_DB_USERNAME:jdbc:postgresql://localhost:5432/enterprise_sales_bot}
+    url: ${TG_DB_URL:jdbc:postgresql://localhost:5432/enterprise_sales_bot}
     username: ${TG_DB_USERNAME:postgres}
     password: ${TG_DB_PASSWORD:123456}
   jpa:
